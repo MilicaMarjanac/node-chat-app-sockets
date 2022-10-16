@@ -1,0 +1,281 @@
+/* General Styles */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  line-height: 1.4;
+  color: #333333;
+  font-family: "Prompt", sans-serif;
+}
+
+h1 {
+  margin-bottom: 13px;
+  display: flex;
+  justify-content: center;
+}
+
+label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 6px;
+  color: hwb(113 1% 47%);
+}
+
+input {
+  border: 1px solid #eeeeee;
+  padding: 12px;
+  outline: none;
+  font-size: 14px;
+}
+
+button {
+  cursor: pointer;
+  padding: 12px;
+  background: hwb(113 2% 35%);
+  border: none;
+  color: white;
+  font-size: 16px;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: hwb(113 1% 47%);
+}
+
+button:disabled {
+  cursor: default;
+  background: hwb(113 2% 35%) 94;
+}
+
+hr {
+  border: 1px solid #eeeeee;
+  margin: 30px 0px;
+}
+
+/* Join Page Styles */
+
+.centered-form {
+  background: #333744;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.centered-form-box {
+  box-shadow: 0px 0px 17px 1px #1d1f26;
+  background: #f7f7fa;
+  padding: 24px;
+  width: 350px;
+  margin: 30px;
+}
+
+select {
+  width: 100%;
+  font-size: 14px;
+  border: 1px solid #eeeeee;
+  padding: 12px;
+  outline: none;
+  color: #333333;
+  margin-bottom: 30px;
+}
+
+.create-button {
+  margin-bottom: 10px;
+  border: 2px solid hwb(113 1% 47%);
+  background-color: white;
+  color: hwb(113 2% 35%);
+}
+
+.create-button:hover {
+  color: white;
+}
+
+.centered-form button {
+  width: 100%;
+}
+
+.centered-form input {
+  margin-bottom: 16px;
+  width: 100%;
+}
+
+.no-rooms {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+  color: hwb(11 7% 18%);
+  font-size: 15px;
+  font-weight: 300;
+}
+
+/* Chat Page Layout */
+
+.chat {
+  display: flex;
+}
+
+.chat-sidebar {
+  height: 100vh;
+  color: rgb(135, 135, 135);
+  background: #333744;
+  width: 280px;
+  overflow-y: scroll;
+}
+.chat-sidebar .room-title,
+.chat-sidebar .list-title {
+  color: rgb(255, 255, 255);
+}
+
+/* Chat styles */
+
+.chat-main {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  max-height: 100vh;
+}
+
+.chat-messages {
+  flex-grow: 1;
+  padding: 30px 30px 0 30px;
+  overflow-y: scroll;
+}
+
+/* Message Styles */
+
+.message.left {
+  text-align: start;
+  margin-bottom: 16px;
+}
+
+.message.right {
+  text-align: end;
+  margin-bottom: 16px;
+}
+
+.message-name {
+  font-weight: 500;
+  font-size: 14px;
+  margin-right: 3px;
+  color: hwb(113 2% 35%);
+}
+
+.message-meta {
+  color: #777;
+  font-size: 13px;
+}
+
+.message a {
+  color: hwb(113 1% 47%);
+}
+
+/* Message Composition Styles */
+
+.compose {
+  display: flex;
+  flex-shrink: 0;
+  margin-top: 16px;
+  padding: 24px;
+}
+
+.compose form {
+  display: flex;
+  flex-grow: 1;
+  margin-right: 16px;
+}
+
+.compose input {
+  border: 1px solid #d6d4d4;
+  width: 100%;
+  padding: 12px;
+  margin: 0 16px 0 0;
+  flex-grow: 1;
+}
+
+.compose button {
+  font-size: 14px;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Chat Sidebar Styles */
+
+.name-container {
+  width: 100%;
+}
+
+.chat-sidebar p {
+  padding-bottom: 5px;
+  margin-bottom: 0px;
+  font-weight: 300;
+  text-align: center;
+  font-size: 12px;
+  color: rgb(165, 165, 165);
+  background-color: hwb(113 80% 0%);
+}
+
+#current-name {
+  width: 100%;
+  padding-top: 8px !important;
+  text-align: center;
+  font-weight: 500;
+  font-size: 20px;
+  color: rgb(49, 49, 49);
+  border: none !important;
+  background-color: hwb(113 80% 0%);
+}
+
+.room-title {
+  width: 100%;
+  padding: 10px;
+  font-weight: 600;
+  font-size: 28px;
+  text-align: center;
+  background: hwb(113 2% 35%);
+}
+
+.list-title {
+  padding: 12px 24px 0 24px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  font-weight: 400;
+  font-size: 16px;
+  text-align: center;
+}
+
+.count {
+  font-size: 15px;
+  padding: 0px 15px;
+  font-weight: 500;
+  color: hwb(113 2% 35%);
+}
+
+.users {
+  list-style-type: none;
+  font-weight: 300;
+  padding: 20px 0px;
+  padding-left: 10px;
+}
+
+.users li {
+  border-bottom: 0.1px solid hwb(113 2% 35% / 0.591);
+  padding: 5px 24px;
+  font-size: 15px;
+}
+
+.online {
+  color: rgb(94, 215, 19);
+  font-weight: 500;
+}

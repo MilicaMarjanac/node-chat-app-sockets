@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Parrot Chat</title>
+    <link rel="icon" href="/img/favicon.png">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@100;200;300;400;500;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="centered-form">
+        <div class="centered-form-box">
+            <h1>Create a Room</h1>
+            <form action="/chat.html" id="create">
+                <label>Your name</label>
+                <input type="text" name="username" placeholder="Your name" required autocomplete="off">
+                <label>Room</label>
+                <input type="text" name="room" required placeholder="Room">
+                <button class="create-button" type="submit">Create Room</button>
+            </form>
+            <hr>
+            <h1>Join a Room</h1>
+            <form action="/chat.html" id="join">
+                <label>Your name</label>
+                <input type="text" name="username" required placeholder="Your name" autocomplete="off">
+                <label>Rooms available</label>
+                <div id="rooms" class="dropdown"></div>
+                <button type="submit">Join Room</button>
+            </form>
+        </div>
+    </div>
+    <script id="empty-template" type="text/html">
+        <p class="no-rooms">{{text}}</p>
+    </script>
+    <script id="rooms-template" type="text/html">
+        <select name=room>
+            {{#options}}
+            <option value="{{name}}" {{#sel}}selected{{/sel}}>
+            {{name}}
+            </option>
+            {{/options}}
+        </select>
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.0.1/mustache.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/dropdown.js"></script>
+</body>
+
+</html>
